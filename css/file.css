@@ -1,3 +1,4 @@
+/*====== Transtion =======*/
 /*==================================================================
 ============== Global Properties ===================================
 =================================================================*/
@@ -31,13 +32,13 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s ease-in-out;
 }
 
-.blue-btn {
+.green-btn {
   background-color: #fff;
   background-color: #2a8e82;
   color: #fff;
 }
 
-.blue-btn:hover {
+.green-btn:hover {
   background-color: #fff;
 }
 
@@ -51,6 +52,12 @@ body::-webkit-scrollbar-thumb {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .btn {
+    padding: 7px 10px;
+    font-size: 14px;
+  }
+}
 /*==================================================================
 ============== NavBar =============================================
 =================================================================*/
@@ -60,10 +67,14 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;
   position: fixed;
   z-index: 10;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  /*=== Logo ===*/
   /*=== nav-links ===*/
   /*=== Bar Icon ===*/
-  /*===== Stying for small screens ====*/
 }
 #navbar.navbar-sticky {
   height: 50px;
@@ -91,15 +102,14 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   height: 100%;
-  /*=== Logo ===*/
 }
-#navbar .container .logo {
+#navbar .logo {
   z-index: 999999;
 }
-#navbar .container .logo a {
+#navbar .logo a {
   color: #fff;
 }
-#navbar .container .logo a img {
+#navbar .logo a img {
   height: 25px;
   width: 25px;
 }
@@ -131,7 +141,11 @@ body::-webkit-scrollbar-thumb {
   width: 0%;
   margin-left: 10%;
   background-color: #2a8e82;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 #navbar .nav-links li a:before:hover {
   width: 80%;
@@ -146,19 +160,29 @@ body::-webkit-scrollbar-thumb {
   background: #fff;
   margin: 4px;
   border-radius: 7px;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 #navbar .bar.toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 #navbar .bar.toggle .line2 {
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   width: 0;
 }
 #navbar .bar.toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
 }
-@media screen and (max-width: 768px) {
+
+/*===== Stying for small screens ====*/
+@media (max-width: 768px) {
   #navbar {
     position: fixed;
     z-index: 9999;
@@ -171,7 +195,11 @@ body::-webkit-scrollbar-thumb {
     top: 50%;
     transform: translate(-5%, -50%);
     z-index: 2;
-    transition: all 0.7s ease;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   #navbar .nav-links {
     position: fixed;
@@ -181,9 +209,13 @@ body::-webkit-scrollbar-thumb {
     left: 0px;
     width: 100%;
     flex-direction: column;
-    clip-path: circle(0px at 100% 0%);
     -webkit-clip-path: circle(0px at 100% 0%);
-    transition: all 0.3s ease-in-out;
+    clip-path: circle(0px at 100% 0%);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     pointer-events: none;
     box-shadow: 0px 0px 15px 0px #0000004f;
     /*===== At Open ====*/
@@ -210,14 +242,19 @@ body::-webkit-scrollbar-thumb {
     margin-left: 40%;
   }
 }
-
 /*==================================================================
 ============== Header =============================================
 =================================================================*/
 #header {
-  background-image: url("../images/bg.png");
   height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  /* Vertical */
+  justify-content: center;
+  /* Horizontal */
+  text-align: center;
+  background-image: url("../images/bg.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -234,7 +271,7 @@ body::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
 }
 #header .header-info {
-  margin-top: 16rem;
+  margin-top: 6rem;
 }
 #header .header-info h1 {
   font-weight: 900;
@@ -257,10 +294,10 @@ body::-webkit-scrollbar-thumb {
   animation: animate 2s infinite;
 }
 #header .header-info .go-down span:nth-child(2) {
-  animation-delay: -0.2s;
+  animation-delay: -0.1s;
 }
 #header .header-info .go-down span:nth-child(3) {
-  animation-delay: -0.4s;
+  animation-delay: -0.2s;
 }
 @keyframes animate {
   0% {
@@ -278,8 +315,11 @@ body::-webkit-scrollbar-thumb {
 
 /*========== Responsive ===========*/
 @media (max-width: 768px) {
+  #header {
+    background-image: url("../images/bg-mob.png");
+  }
   #header h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 /*==================================================================

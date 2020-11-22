@@ -5,12 +5,12 @@
     font-weight: 800;
     transition: all 0.3s ease-in-out;
 }
-.blue-btn{
+.green-btn{
     background-color: #fff;
     background-color: $mainColor;
     color: $white;
 }
-.blue-btn:hover{
+.green-btn:hover{
     background-color: $white;
 }
 .white-btn{
@@ -20,4 +20,10 @@
 .white-btn:hover{
     background-color: $mainColor;
     color: $white;
+}
+@media (max-width: 768px){
+    .btn{
+        padding: 7px 10px;
+        font-size: 14px;    
+    }    
 }
