@@ -9,7 +9,6 @@ body {
   height: 5000px;
   overflow-x: hidden;
   font-size: 16px;
-  color: #939393;
 }
 
 body::-webkit-scrollbar {
@@ -25,9 +24,23 @@ body::-webkit-scrollbar-thumb {
 }
 
 .site-section {
-  padding: 80px 0px;
+  padding-top: 80px;
 }
 
+p.heading {
+  font-size: 45px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 576px) {
+  .site-section {
+    padding-top: 50px;
+  }
+
+  p.heading {
+    font-size: 35px;
+  }
+}
 .btn {
   padding: 10px 15px;
   border-radius: 25px;
@@ -330,22 +343,17 @@ body::-webkit-scrollbar-thumb {
 ============== About =============================================
 =================================================================*/
 #about {
-  height: 500px;
   position: relative;
   background-color: #fff;
 }
-#about::before {
+#about .right-section::before {
   content: "";
   position: absolute;
-  left: 30%;
+  right: -170px;
+  top: -40px;
   width: 300px;
   height: 260px;
   background: url("../images/xdots.webp");
-  transform: translate(40%, -20%);
-  -webkit-transform: translate(40%, -20%);
-  -ms-transform: translate(40%, -20%);
-  -moz-transform: translate(40%, -20%);
-  -o-transform: translate(40%, -20%);
 }
 #about .right-section .img-container {
   width: 100%;
@@ -367,11 +375,69 @@ body::-webkit-scrollbar-thumb {
 #about .my-bio p {
   color: #000;
 }
-#about .my-bio .heading {
-  font-size: 45px;
-  margin-bottom: 0px;
+
+/*==================================================================
+============== Skills =============================================
+=================================================================*/
+#skills .progress-bars {
+  padding: 40px 0px;
+}
+#skills .progress-bars > div:nth-of-type(2) {
+  position: relative;
+}
+#skills .progress-bars > div:nth-of-type(2) span {
+  position: absolute;
+  width: 4px;
+  height: 80%;
+  top: 10%;
+  background: #2a8e82;
+  border-radius: 5px;
+}
+#skills .progress-bars .skill h3 {
+  font-size: 18px;
+}
+#skills .progress-bars .skill .progress {
+  overflow: visible;
+  margin-bottom: 26px;
+  height: 4px;
+}
+#skills .progress-bars .skill .progress .progress-bar {
+  background-color: #2a8e82;
+  position: relative;
+  border-radius: 4px;
+  overflow: visible;
+  height: 5px;
+}
+#skills .progress-bars .skill .progress span {
+  background-color: #2a8e82;
+  position: absolute;
+  bottom: -25px;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 4px 5px;
+  right: -1.4em;
+  border-radius: 2px;
+}
+#skills .progress-bars .skill .progress span::after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #2a8e82;
+  border-width: 5px;
+  margin-left: -5px;
 }
 
+@media (max-width: 768px) {
+  #skills .progress-bars > div:nth-of-type(2) span {
+    display: none;
+  }
+}
 /*==================================================================
 ============== Works =============================================
 =================================================================*/
