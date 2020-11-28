@@ -5,13 +5,12 @@ body {
     font-family: "Nunito", sans-serif;
     line-height: 1.6;
     background: #ffffff;
-    height: 5000px;
     overflow-x: hidden;
     font-size: 16px;
 }
 body::-webkit-scrollbar {
     background-color: $lightMainColor;
-    width: 10px;
+    width: 7px;
     right: -10px
 }
 body::-webkit-scrollbar-thumb{
