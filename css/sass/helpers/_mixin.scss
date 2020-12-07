@@ -6,3 +6,10 @@
     -ms-transition:  all $sec ease-in-out;
     transition:  all $sec ease-in-out;
 }
+@mixin borderRadius( $px ){
+    border-radius: $px;
+    -webkit-border-radius: $px;
+    -moz-border-radius: $px;
+    -ms-border-radius: $px;
+    -o-border-radius: $px;
+}

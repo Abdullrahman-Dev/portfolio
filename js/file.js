@@ -35,7 +35,6 @@ bar.addEventListener('click', ()=>{
 });
 /*========== at click links go sections ===========*/
 var navAnchors = document.querySelectorAll(".nav-links li a");
-var navAnchors = document.querySelectorAll("#footer .widget .links li a");
 navAnchors.forEach( navAnchor  => {
     navAnchor.onclick = function (e){
         e.preventDefault();
@@ -60,4 +59,14 @@ iconOpacity();
 /*====== At Click Icon ======*/
 arrowIcon.onclick = function (e){
     window.scrollTo({top: 0, behavior: 'smooth'});
+}
+/*==================================================================
+======================== My Works ==================================
+==================================================================*/
+var worksAnchor = document.querySelector("#home a.works");
+worksAnchor.onclick = function (e){
+    e.preventDefault();
+    // alert("sdf")
+    var worksSection = document.getElementById("works");
+    worksSection.scrollIntoView({behavior: "smooth"});
 }
