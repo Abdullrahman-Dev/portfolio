@@ -4,7 +4,7 @@
 #absolute-icons{
 
     .fa-arrow-alt-circle-up{
-        z-index: 999999999999999;
+        z-index: 999999999;
         cursor: pointer;
         color: $mainColor;
         font-size: 50px;
@@ -15,7 +15,7 @@
         @include transition( 0.5s);
     }
     .contact-icons{
-        z-index: 999999999999999;
+        z-index: 999999999;
         position: fixed;  
         bottom: 8%;
         left: 2%;  

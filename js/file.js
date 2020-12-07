@@ -70,3 +70,20 @@ worksAnchor.onclick = function (e){
     var worksSection = document.getElementById("works");
     worksSection.scrollIntoView({behavior: "smooth"});
 }
+/*==================================================================
+======================== Loading Overlay ===========================
+==================================================================*/
+function funRender() {
+    document.getElementById("loading-overlay").style.opacity = '1';
+
+} 
+function funload() {
+    // console.log("funload");
+    document.getElementById("loading-overlay").style.opacity = '0';
+    setInterval(function(){ 
+        document.getElementById("loading-overlay").style.display = 'none';
+    }, 1000);
+
+}  
+window.onprerender = funRender();
+window.onload = funload();
